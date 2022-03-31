@@ -11,7 +11,7 @@ if (chislo>25 && chislo<200){
 
 //Задание номер 6
 let number,response, n=50;
-let max=100, min=1;
+let max=101, min=1;
 while (n/2>0){
     n=Math.floor((max+min)/2);
     response=prompt(`Это число больше, меньше или равно ${n}`);

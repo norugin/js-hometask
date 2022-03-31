@@ -20,22 +20,20 @@ let sum=23000,code=6113;
 switch(code){
 case 4653:
     sum=Math.round(sum*0.7);
-    console.log(`Ваша скидка 30%, сумма заказа - ${sum}`);
     break;
 case 5698:
 case 5111:
     sum=Math.round(sum*0.8);
-    console.log(`Ваша скидка 20%, сумма заказа - ${sum}`);
     break;
 case 6922:
 case 6113:
 case 6099:
     sum=Math.round(sum*0.9);
-    console.log(`Ваша скидка 10%, сумма заказа - ${sum}`);
     break;
 default:
-    console.log(`Скидка не предусмотрена, сумма заказа - ${sum}`);
+    break;
 }
+console.log(`С учетом промокода, сумма вашего заказа равна ${sum}`);
 
 
 //Задание номер 3
