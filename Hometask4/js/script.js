@@ -42,7 +42,7 @@ console.log(massiv);
 massiv.splice(0,massiv.length);
 let sentence;
 let el;
-massiv[0]=0;
+massiv[0]=undefined;
 let n=0;
 let g=0;
 let lastElement;
@@ -55,18 +55,13 @@ while(true){
         }
         break;
     }else{
-        massiv[n]=sentence;
-        n++
-        if(massiv.length>1){
-            for(let i=0;i<massiv.length-1;i++){
-                if (massiv[massiv.length-1]===massiv[i]){
-                    massiv.splice(massiv.length-1,1);
-                }
-            }
+        if (massiv[0]===undefined){
+            massiv[0]=sentence;
+        } else{
+        if(!massiv.includes(sentence)){
+            massiv[massiv.length]=sentence;
         }
     }
+    }
 }
-massiv=massiv.filter(function(el){
-    return (el!=undefined);
-    });    
 console.log(massiv);
