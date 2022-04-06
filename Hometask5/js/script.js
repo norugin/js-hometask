@@ -2,14 +2,14 @@
 function range(xstart,xend,h=1){
     if (h<=0 || xend-xstart<=h || xstart>=xend){
         return "Неверно введенные данные"
-    } else{
-        let arr=[];
-        while(xstart<=xend){
-            arr.push(xstart);
-            xstart+=h;
-        }
-        return arr;
     }
+    let arr=[];
+    while(xstart<=xend){
+        arr.push(xstart);
+        xstart+=h;
+    }
+    return arr;
+    
 }
 console.log(range(1,8,5));
 
