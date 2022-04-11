@@ -18,20 +18,10 @@ console.log(numbers);
 
 //Задание 14
 let presents = ["книга", "ручка", "блокнот", "дождевик", "скрепки", "брелок"];
-function random(){
-    if(Math.random>=0.5) return 1;
-    return -1;
+function random(a,b){
+    return Math.random()-0.5;
 }
-function randomPresents(a,b){
-    let buffer;
-    if (a.length===b.length) return 0;
-    if(a.length>b.length){
-        buffer=random();
-        return buffer;
-    }
-    return -buffer;
-}
-presents.sort(randomPresents);
+presents.sort(random);
 console.log(presents);
 
 //Задание 16 
@@ -54,6 +44,6 @@ else console.log("Температура не поднималась выше 50
 let first = ["Апрель", "Июль", "Октябрь", "Май"],
     second = ["Май", "Январь", "Декабрь", "Октябрь"];
 let itogMassiv=second.filter(elem=>{
-        if (first.includes(elem)) return elem;
+        return first.includes(elem);
 });
 console.log(itogMassiv);
