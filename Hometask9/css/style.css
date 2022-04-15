@@ -1,0 +1,19 @@
+table{
+    padding: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table tr:nth-child(2n+1){
+    background-color: mediumpurple;
+}
+table tr:nth-child(1){
+    background-color: blueviolet;
+}
+table tr:nth-child(1)>td{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+.table{
+    display: inline-block;
+}
