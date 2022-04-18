@@ -17,3 +17,15 @@ table tr:nth-child(1)>td{
 .table{
     display: inline-block;
 }
+td{
+    padding: 15px;
+    border: black solid;
+}
+table{
+    text-align: center;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}

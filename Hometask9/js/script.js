@@ -88,15 +88,29 @@ let fillTable=function(mass){
 fillTable(articles);
 tableArea.append(table);
 
-let priseTableArea=document.querySelector('.prisetable');
-let tablitsa=document.createElement('table');
-let createPiseTable=function(n){
-    for (let i=0;i<n;i++){
-        let row=tablitsa.insertRow(i);
-        for (let g=0;g<n;g++){
-            let cell=row.insertCell();
+let prises = {
+    headphones: "Наушники",
+    book: "Книга",
+    postcard: "Открытка"
+};
+
+function generateField (n){
+    let tablitsa = document.createElement("table");
+    tablitsa.classList.add("field");
+    if (n < 3) return;
+    for (let i = 0; i < n; i++){
+        let row = tablitsa.insertRow();
+        for (let j = 0; j < n; j++){
+            row.insertCell();
         }
     }
+    document.body.append(tablitsa);
+    let cells = document.querySelectorAll(".field td");
+    for (let i = 0; i < 3; i++){
+        let index = Math.floor(Math.random() * cells.length);
+        cells[index].innerText = Object.values(prises)[i];
+    }
+
 }
-createPiseTable(4);
-priseTableArea.append(tablitsa);
+
+generateField(4);
